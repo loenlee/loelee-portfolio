@@ -1,0 +1,1446 @@
+I grow diverse winning teams.
+Loe Lee
+
+-- 1 of 157 --
+
+Information Architecture
+Growth, IA, Auth, Prod Comms, Listing Completeness
+Email and Push Experience Platform 	Onboarding
+ZILLOW
+4 Product Designers
++17 PMs and 50+ ENG
+Homepage
+Authentication
+Notifications Settings
+SEO 	Activation
+
+-- 2 of 157 --
+
+ZILLOW
+4 Product Designers
+Zillow’s sign in experience
+needs a major upgrade to
+accommodate the needs
+of a Housing Super App.
+
+-- 3 of 157 --
+
+ZILLOW
+4 Product Designers
+Zillow may not be able to
+establish or maintain
+relationships with listing and
+data providers, including
+MLSs, which could adversely
+affect traffic to their app.
+
+-- 4 of 157 --
+
+ZILLOW
+4 Product Designers
+Zillow’s IA lacks intention
+and causes serious
+customer pain with (almost)
+every new feature launch.
+
+-- 5 of 157 --
+
+ZILLOW
+4 Product Designers
+Zillow needs to
+communicate with
+customers in a clear and
+helpful way.
+
+-- 6 of 157 --
+
+ZILLOW
+4 Product Designers
+Zillow needs to onboard
+customers so they can move
+faster and more easily.
+
+-- 7 of 157 --
+
+I believe in…
+Why Vanta?
+A design, product, engineering trio
+A scope for individual and direct report success
+A collaborative, action oriented culture
+A clear strategy
+A great manager
+
+-- 8 of 157 --
+
+● What I did versus “we”
+● Craft
+● Collaboration
+I’ll touch on:
+
+-- 9 of 157 --
+
+Zillow
+More hands on
+Step by step design
+Alignment needs
+In flight
+HubSpot
+More hands off
+Design strategy
+Craft needs
+Launched
+
+-- 10 of 157 --
+
+CONFIDENTIAL
+CIAM Zillow Sign
+in Experience
+Zillow Experience Design
+
+-- 11 of 157 --
+
+● The challenge
+● Where are we now
+● Best practices
+● Recommendations
+Contents
+
+-- 12 of 157 --
+
+Zillow uses sign in unconventionally.
+This hurts our customers.
+The challenge
+Experiences aren’t personalized
+● Zillow is unable to connect customer behavior and
+data to a specific identity. They engage with us and
+provide information. We treat them like strangers.
+Data is not protected
+● Zillow can’t protect customers’ data with the current
+customer data infrastructure and technology.
+Trust is low and cognitive load is high
+● Customers have to sign in multiple times.
+
+-- 13 of 157 --
+
+Our sign in experience helps and
+hurts our business.
+We capture a high volume of leads for realtors
+because there is minimal friction
+● If we only ask for emails or phone numbers-not a
+sign in, leads are (in theory) more likely to
+provide lead information.
+The challenge
+
+-- 14 of 157 --
+
+Our sign in experience helps and
+hurts our business.
+The Zillow Housing Super App is impossible to achieve
+● If we can’t personalize, we can’t do the app
+Building and maintaining disparate sign ins slows our
+product development
+● Building and maintaining one offs is expensive
+Security standards are not being met
+● As we move to Auth0, our existing non-2FA session
+will continue to present security issues.
+Listing completeness is at risk
+● Sign in will need to be more common and required
+The challenge
+
+-- 15 of 157 --
+
+● The challenge
+● Where are we now
+● Best practices
+● Recommendations
+Contents
+
+-- 16 of 157 --
+
+Where we are now
+A look at our current sign in experience
+● How customers get into our app
+● Where sign in is required in the app
+● How they know to sign in
+● What they do to sign in
+The challenge
+
+-- 17 of 157 --
+
+How customers get
+into the mobile app
+● When anonymously downloading
+the mobile application, new
+customers are blocked by this
+sign in screen.
+● If they close the app and open it
+again, they can bypass the sign
+in screen.
+The challenge
+
+-- 18 of 157 --
+
+Where sign in is required
+Global navigation 	Tour a rental
+Save a search 	Tour to buy
+Save a home 	Contact an agent to buy
+Claim a home 	Ask a question about a rental
+Get new listings in email (save search) MISO seller
+Hide a home 	ZHL PreQual
+Apply to rent 	Full Page Auth
+The challenge
+
+-- 19 of 157 --
+
+Write a review 	ZRM top nav (resources, price, post a
+listing)
+View owner dashboard, correct facts,
+edit photos
+PA sign in
+ZRM list your properties 	PA join
+ZRM advertising
+Where sign in is required
+The challenge
+
+-- 20 of 157 --
+
+How customers
+know to sign in
+● Hidden sign in gate: Customers
+act on what they want and are
+blocked by a sign in ask
+● Hidden sign in: Customers
+complete a form request and are
+signed in without knowing
+● Visible sign in: Customers know
+they must sign in to get something
+they want
+The challenge
+
+-- 21 of 157 --
+
+Examples of
+a hidden sign
+in gate
+
+-- 22 of 157 --
+
+Examples of
+hidden sign in
+
+-- 23 of 157 --
+
+
+
+-- 24 of 157 --
+
+Examples of
+visible sign in
+
+-- 25 of 157 --
+
+How they sign in
+Where we are now
+● All current sign in experiences require
+email at minimum
+● Our 12 sign ins require various
+combinations and orders of:
+○ Email
+○ Password
+○ Name
+○ Message
+○ Phone
+● Customers may have varying levels of
+trust when it comes to entering in
+different information in different
+contexts (needs validation)
+
+-- 26 of 157 --
+
+Sometimes customers
+have to sign in twice
+● Prior to 6 months ago there was one
+sign in (before OAuth, Auth0)
+● With shift to OAth and multiple IDPs,
+this forces an interim multiple sign in
+experience.
+● First you sign into Shopping. That
+token you get back does not work in
+ZHL world. It doesn't work in reverse
+either from ZHL to Shopping.
+Where we are now
+
+-- 27 of 157 --
+
+Current questions to answer with insights
+● For each of the 22 sign in entry points, where do customers drop off?
+● If we stack rank the 22 sign in entry points based on sign in volume, how
+do they all rank and what is the volume per entry point?
+● What do customers think they’ll be able to do/accomplish when they sign
+in to our mobile app?
+● What impact does up front sign in in a flow vs. later sign in in a flow (i.e.
+what they explored through touring sign up) have on the customer?
+● How do customers perceive different kinds of sign in? Passkey vs. SMS
+OTP? Email OTP vs. biometrics, etc.?
+● How do our 22 sign in entry points impact different parts of the business?
+Shopping, ZHL, Rentals? What is the correlation or lack thereof?
+Where we are now
+
+-- 28 of 157 --
+
+Current questions to answer with insights
+● What is the expected/measured trade off we expect when we require
+verified information across the entire app experience (all platforms) when
+it comes to unverified leads and the ROI?
+● Does Auth0 have industry baseline data for sign in success and failure
+we could leverage to ensure we’re designing and implementing
+effectively?
+Where we are now
+
+-- 29 of 157 --
+
+● The challenge
+● Where are we now
+● Best practices
+● Recommendations
+Contents
+
+-- 30 of 157 --
+
+How sign in is crafted by
+companies we admire
+Best practices
+There are six key elements of an ideal sign in experience.
+● Make it an option at the start of the experience
+● Make the sign in fields and the interface consistent
+when possible
+● Use the information you have to make an streamline
+future sign ins
+● Once you sign in, you’re in
+● Sign in experiences should reflect customer intent
+
+-- 31 of 157 --
+
+Make sign in an
+option at the start
+of the experience
+Best practices
+
+-- 32 of 157 --
+
+Make sign in fields
+and UI consistent
+when possible
+Best practices
+
+-- 33 of 157 --
+
+Make the sign in
+fields and the
+interface consistent
+when possible
+Best practices
+
+-- 34 of 157 --
+
+Use the sign in
+information you
+have to streamline
+future sign ins
+Best practices
+
+-- 35 of 157 --
+
+Once you sign
+in, you’re in
+Sign in for
+any needs
+Decide
+what I need
+Get anything
+I need
+Decide
+what I need
+Sign in for
+Shopping
+Sign in for
+ZHL
+Get
+Shopping Get ZHL
+I need ZHL I need
+Shopping
+Best practice flow on left. Zillow on right.
+Best practices
+
+-- 36 of 157 --
+
+Sign in ux
+should reflect
+customer intent
+Best practices
+
+-- 37 of 157 --
+
+Stay on brand in
+feeling and tone
+Best practices
+
+-- 38 of 157 --
+
+Unlike Expedia and
+Airbnb, apps like
+Robinhood have a 22+
+step required sign in
+experience
+Best practices
+
+-- 39 of 157 --
+
+Build trust and
+context when the
+experience is
+higher risk for
+the customer
+Best practices
+
+-- 40 of 157 --
+
+Best practices and Zillow comparison
+Best practice 	Report card 	Grade
+Make sign in an option at the start of the
+experience
+Zillow currently has a sign in at the start with no option
+to get out.
+B
+Make the information you ask for and the
+interface consistent when possible
+Zillow asks for different information at sign in.
+Sometimes signs people in without them knowing.
+F
+Leverage the information you have to make an
+streamline future sign ins
+Zillow streamlines future logins and form fills by
+leveraging previous sign in information
+A
+Once you sign in, you’re in 	Zillow has multiple sign ins 	F
+Sign in experiences should reflect customer
+intent
+Zillow provides sign in context to customers
+inconsistently and sometimes signs them in (creates an
+account) without them knowing
+B
+Sign in should build trust and context when the
+experience is more sensitive
+Zillow does not build trust and context when Movers
+may be looking to finance or buy
+F
+Best practices
+
+-- 41 of 157 --
+
+Opportunity to explore
+more transaction focused
+apps to identify how
+these sign in experiences
+differ from browsing
+focused apps.
+Ally
+Betterment
+Invstr
+CarMax
+Best practices
+
+-- 42 of 157 --
+
+Application 	Customer intent 	Number of steps 	Level of security 	Education needed
+● 	Ally 	High 	High 	High 	High
+Betterment 	High 	High 	High 	High
+CarMax 	Medium 	Low 	High 	High
+Invstr 	High 	High 	High 	High
+Airbnb 	Medium 	Low 	Medium 	Low
+Expedia 	Medium 	Low 	Medium 	Low
+Browsing sign in vs. transactional
+sign in (tldr; they’re different)
+Best practices
+
+-- 43 of 157 --
+
+Application 	Customer intent 	Number of steps 	Level of security 	Education needed
+● 	Ally 	High 	High 	High 	High
+Betterment 	High 	High 	High 	High
+CarMax 	Medium 	Low 	High 	High
+Invstr 	High 	High 	High 	High
+Airbnb 	Medium 	Low 	Medium 	Low
+Expedia 	Medium 	Low 	Medium 	Low
+Browsing sign in vs. transactional
+sign in (tldr; they’re different)
+Best practices
+Apps like CarMax could be worth
+investigating because it
+incentivizes both browsing and
+high risk transactions.
+
+-- 44 of 157 --
+
+● The challenge
+● Where are we now
+● Best practices
+● A recommendation
+Contents
+
+-- 45 of 157 --
+
+Acknowledge constraints
+Our existing business model vs. our future one
+● If our model prioritizes high volume
+leads(unverified), we could add friction to
+secure customer transactions and increase
+Zillow’s risk of security breaches
+● If our model prioritizes high quality(verified)
+leads and secure customer transactions, we
+could add friction to customer form fills and
+decrease overall lead volume
+Best practices
+
+-- 46 of 157 --
+
+Acknowledge constraints
+Shopping and ZHL want different sign in information
+● Shopping wants SMS OTP and ZHL wants Email
+OTP. Prioritizing one causes friction for the other.
+Our technology setup isn’t ideal for optimizing sign in
+● Given the way Zillow authentication was built, it
+requires modals as we implement OAuth, Auth0,
+new IDP. Modals could lead to customer friction.
+We lack insights to make informed sign in decisions
+● Sign in behaviors and events have not been
+tracked consistently or at all.
+Best practices
+
+-- 47 of 157 --
+
+Acknowledge constraints
+Sign in experiments are costly for our
+customers and our business
+● Building and testing sign in flows is a
+significant lift for Eng. It impacts
+customer data and their ongoing Zillow
+experience.
+There is no defined and agreed upon
+holistic experience outcome
+● When no ux outcome is defined and
+agreed to, there is no path to an
+outcome causing cross functional
+friction, inefficiency, and misalignment.
+Best practices
+
+-- 48 of 157 --
+
+1. Agree and align on Assurance Levels
+2. Agree on holistic design recommendation
+3. Mitigate risk through experimentation
+4. Measure potential impact
+5. Agree on the winning sign-in strategy
+6. Agree on a roll out plan
+A recommendation
+Recommended next steps
+
+-- 49 of 157 --
+
+Thank you for your feedback,
+comments, questions, team!
+
+-- 50 of 157 --
+
+In the meantime, I had
+my team start running
+at one of the critical
+problems to create
+momentum and
+alignment...
+A recommendation
+
+-- 51 of 157 --
+
+Problems and solutions
+A recommendation
+No PM DRI to define and prioritize work 	Lead with a design strategy
+Inadequate design resources 	Be a player coach
+A cross company effort (16 eng teams) 	Be the glue. Including eng raise gaps.
+
+-- 52 of 157 --
+
+I drafted a design strategy and timeline
+A recommendation
+Loe, direct, uxr, cd
+
+-- 53 of 157 --
+
+I led a cross functional
+brainstorm to identify themes we
+should consider
+A recommendation
+Loe, direct, uxr, cd
+
+-- 54 of 157 --
+
+I coached my direct to act, show,
+and assume to create momentum
+A recommendation
+Loe, direct, uxr, cd
+
+-- 55 of 157 --
+
+I teed up research and
+design prototypes to
+ensure we solve for
+customers and get
+actionable research
+outcomes
+A recommendation
+Loe, direct, uxr, cd
+
+-- 56 of 157 --
+
+I met daily with my
+direct report to
+ensure high craft.
+A recommendation
+Loe, direct, uxr, cd
+
+-- 57 of 157 --
+
+I met daily with my
+direct report to
+ensure high craft
+A recommendation
+Loe, direct, uxr, cd
+
+-- 58 of 157 --
+
+I proactively
+surfaced disconnects
+with product, design,
+and engineering to
+create alignment
+A recommendation
+Loe, direct, uxr, cd
+
+-- 59 of 157 --
+
+I shared designs with
+eng and partnered
+with ops to create
+more inclusive
+product and design
+development systems
+A recommendation
+Loe, direct, uxr, cd
+
+-- 60 of 157 --
+
+A recommendation
+Loe, direct, uxr, cd
+Great work is never
+done! The story
+(probably) lives on
+to this day. Let’s
+talk HubSpot…
+
+-- 61 of 157 --
+
+Helping Small
+Business Marketers
+grow at HubSpot
+
+-- 62 of 157 --
+
+HUBSPOT CMS HUB
+UX TEAM
+7 Product Designers
+1 UX Researcher
+3 Design Leads
+
+-- 63 of 157 --
+
+User
+Problems
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 64 of 157 --
+
+(all driven by insights)
+User
+Problem
+Solution
+Impact
+HOW LOE WORKS
+
+-- 65 of 157 --
+
+SETTING CONTEXT
+HubSpot is a software
+solution that helps
+companies grow better.
+
+-- 66 of 157 --
+
+SETTING CONTEXT
+There are different Hubs.
+Each hub is for a different
+customer persona.
+
+-- 67 of 157 --
+
+SETTING CONTEXT
+Every hub has starter,
+professional, and
+enterprise tiers.
+
+-- 68 of 157 --
+
+SETTING CONTEXT
+(all except CMS Hub)
+
+-- 69 of 157 --
+
+User
+Problems
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 70 of 157 --
+
+Marketing Meerah
+USER
+
+-- 71 of 157 --
+
+Meerah’s tools
+USER
+
+-- 72 of 157 --
+
+User
+Problems
+Customer needs
+Product constraints
+Organizational challenges
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 73 of 157 --
+
+CUSTOMER NEEDS
+
+-- 74 of 157 --
+
+CUSTOMER NEEDS
+
+-- 75 of 157 --
+
+CUSTOMER NEEDS
+
+-- 76 of 157 --
+
+CUSTOMER NEEDS
+
+-- 77 of 157 --
+
+Let’s move Meerah to HubSpot
+CUSTOMER NEEDS
+
+-- 78 of 157 --
+
+User
+Problems
+Customer needs
+Product constraints
+Organizational challenges
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 79 of 157 --
+
+Solutions for bigger companies
+PRODUCT CONSTRAINTS
+
+-- 80 of 157 --
+
+3 months to onboardPartnered with internal onboarding consultants
+to audit current experience.
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 81 of 157 --
+
+Sales
+Sales 	Support
+HubSpot Consultant
+HubSpot Consultant 	Support
+$500 consulting fee
+Support
+Many points of contact
+Mary would have to pay additional fees and
+take precious time to find help.
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 82 of 157 --
+
+A blog setup for developers
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 83 of 157 --
+
+Hard editor
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 84 of 157 --
+
+Hard editor
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 85 of 157 --
+
+Hard editor
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 86 of 157 --
+
+Hard editor
+Loe + direct report
+PRODUCT CONSTRAINTS
+
+-- 87 of 157 --
+
+All confirmed through research
+Select a theme 	B
+Change logo and navigation 	D+
+Inline editing 	B+
+Adding background image 	B+
+Create a folder 	C
+Create and add a form 	F
+Set up a blog 	F
+Grading Research Doc and User Onboarding Research
+Loe + research lead
+PRODUCT CONSTRAINTS
+
+-- 88 of 157 --
+
+User
+Problems
+Customer needs
+Product constraints
+Organizational challenges
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 89 of 157 --
+
+❏ Concerned general manager
+❏ UX had bad morale
+❏ Questionable customer impact
+❏ Lack of ownership over work
+❏ Stagnant career growth
+❏ Lack of belonging is attrition risk
+Organizational challenges
+ORGANIZATIONAL CHALLENGES
+
+-- 90 of 157 --
+
+How do I know the product UX
+will be at the level of excellence
+want it to be? I want an A.
+A concerned
+General Manager
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 91 of 157 --
+
+❏ Concerned general manager
+❏ UX had bad morale
+❏ Questionable customer impact
+❏ Lack of ownership over work
+❏ Stagnant career growth
+Organizational challenges
+ORGANIZATIONAL CHALLENGES
+
+-- 92 of 157 --
+
+I don’t know if my designs were successful.
+I don’t understand why I’m not being promoted.
+I just do what my PM tells me to do.
+UX had bad morale
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 93 of 157 --
+
+I don’t know if my designs were successful.
+I don’t understand why I’m not being promoted.
+I just do what my PM tells me to do.
+UX had bad morale
+CRAFT
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 94 of 157 --
+
+
+
+-- 95 of 157 --
+
+User
+Problems
+Solutions
+Organizational solutions
+Product solutions
+Impact
+HOW LOE WORKS
+
+-- 96 of 157 --
+
+Grading Research
+I spearheaded triangulated
+insights to communicate
+experience readiness.
+Loe + research lead
+ORGANIZATIONAL CHALLENGES
+
+-- 97 of 157 --
+
+● PMs could prioritize work better
+● PMs wanted to contribute
+● HubSpot rolled this out company-wide
+Unexpected benefits
+ORGANIZATIONAL CHALLENGES
+
+-- 98 of 157 --
+
+Make one pagers standard
+User
+Problem
+Solution
+Impact
+User
+Problem
+Hypothesis
+Results
+Conclusion Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 99 of 157 --
+
+Make one pagers standard
+(and influence how others make product)
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 100 of 157 --
+
+Impact
+Technology 	User
+Design Customer Centric Missions
+Loe + Dr. PM & Eng
+ORGANIZATIONAL CHALLENGES
+
+-- 101 of 157 --
+
+Impact
+What is the desired outcome?
+Technology
+How will we build it?
+User
+Who are we solving for?
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 102 of 157 --
+
+Example: HubDB
+Impact
+What is the desired outcome?
+Technology
+How will we build it?
+User
+Who are we solving for?
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 103 of 157 --
+
+Example: Knowledgebase
+Impact
+What is the desired outcome?
+Technology
+How will we build it?
+User
+Who are we solving for?
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 104 of 157 --
+
+Example: Topic clusters
+Impact
+What is the desired outcome?
+Technology
+How will we build it?
+User
+Who are we solving for?
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 105 of 157 --
+
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 106 of 157 --
+
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 107 of 157 --
+
+Time
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 108 of 157 --
+
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 109 of 157 --
+
+CMS Growth
+Mission: Help marketers quickly
+discover the value of CMS Hub with
+a fully product-driven sales and
+onboarding experience.
+Loe + Dr. PM & Eng
+ORGANIZATIONAL CHALLENGES
+
+-- 110 of 157 --
+
+CMS Growth
+Mission: Help marketers quickly
+discover the value of CMS Hub with
+a fully product-driven sales and
+onboarding experience.
+Loe + Dr. PM & Eng
+ORGANIZATIONAL CHALLENGES
+
+-- 111 of 157 --
+
+Content Management
+Mission: Help Marketers organize and
+report on content so they save time and
+make impactful business decisions.
+Loe + Dr. PM & Eng
+ORGANIZATIONAL CHALLENGES
+
+-- 112 of 157 --
+
+Content Presentation
+Mission: Help Marketers build scalable
+content to grow their business.
+Loe + Dr. PM & Eng
+ORGANIZATIONAL CHALLENGES
+
+-- 113 of 157 --
+
+ORGANIZATIONAL CHALLENGES
+
+-- 114 of 157 --
+
+Growth plans
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 115 of 157 --
+
+Influencing with design strategy
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 116 of 157 --
+
+Performance management
+Partnering with HR, I designed
+and implemented the way we
+performance manage on the
+CMS Hub design team to set a
+clear benchmark.
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 117 of 157 --
+
+I partnered with HR and recruiting
+to require a full slate for
+candidate consideration. Each
+slate must have at least one or
+two people from an
+underrepresented group.
+Hiring
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 118 of 157 --
+
+I lead by example in design
+critiques - encouraging a culture of
+feedback and questioning. I
+leveraged super powers in the team
+and brought in external super
+powers when needed (i.e. folks on
+the Canvas design system).
+Highlighting great work
+Loe
+ORGANIZATIONAL CHALLENGES
+
+-- 119 of 157 --
+
+User
+Problems
+Solutions
+Organizational solutions
+Product solutions
+Impact
+HOW LOE WORKS
+
+-- 120 of 157 --
+
+Build a website importer
+Failed Product Solution
+PRODUCT SOLUTIONS
+Loe, direct report
+
+-- 121 of 157 --
+
+We can’t import
+unstructured data
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 122 of 157 --
+
+Enable Marketing Meerah to
+build on her own.
+Successful Product Solution
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 123 of 157 --
+
+● Less customizable
+● Editor not easy
+● Cannot migrate website
+Trade offs
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 124 of 157 --
+
+Validating solutions with research
+Jan 	Mar 	May 	July
+CONCEPT
+TESTING
+6 one hour interviews
+with customers to
+validate Ideas
+CMS GRADING
+STUDY
+12 unmoderated user
+tests of 27 key flows
+w/in the CMS
+ONBOARDING
+GUIDE TEST
+Visual design test to
+determine which of 3
+variants user can
+identify the main CTA
+EXTERNAL
+USER
+TESTING
+6 user interviews
+testing designs for
+CMSS Onboarding.
+EMPATHY
+SESSION
+User Guide Testing
+EMPATHY
+SESSION
+Competitive Analysis
+EMPATHY
+SESSION
+Downgrades
+EMPATHY
+SESSION
+Onboarding
+BETA
+FEEDBACK
+Feedback from 37
+partners in the early
+beta
+USER
+TESTING
+Live product testing with
+6-10 target users
+INTERNAL
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 125 of 157 --
+
+Working collaboratively and lean
+Loe, whole team
+PRODUCT SOLUTIONS
+
+-- 126 of 157 --
+
+Partnering cross functionally
+Marketplace
+CMS Hub Product
+Go to Market
+Growth Product
+Partner enablement
+Customer success
+Sales
+Business Operations
+Marketing
+Loe, whole team
+PRODUCT SOLUTIONS
+
+-- 127 of 157 --
+
+A helpful website
+theme marketplace
+Loe, direct,
+Marketplace
+PRODUCT SOLUTIONS
+
+-- 128 of 157 --
+
+Conversational onboarding
+Loe, direct, Growth
+PRODUCT SOLUTIONS
+
+-- 129 of 157 --
+
+Conversational onboarding
+Loe, direct, Growth
+PRODUCT SOLUTIONS
+
+-- 130 of 157 --
+
+Loe, direct, Growth
+PRODUCT SOLUTIONS
+Conversational onboarding
+
+-- 131 of 157 --
+
+Loe, direct, Growth
+PRODUCT SOLUTIONS
+Conversational onboarding
+
+-- 132 of 157 --
+
+User Guide Redesign
+Loe, direct, Growth
+PRODUCT SOLUTIONS
+
+-- 133 of 157 --
+
+Loe, direct, Growth
+
+-- 134 of 157 --
+
+Help Meerah build on her own
+PRODUCT SOLUTIONS
+
+-- 135 of 157 --
+
+Loe, direct report
+
+-- 136 of 157 --
+
+Loe, direct report
+
+-- 137 of 157 --
+
+Loe, direct report
+
+-- 138 of 157 --
+
+Loe, direct report
+
+-- 139 of 157 --
+
+Loe, direct report
+
+-- 140 of 157 --
+
+Loe, direct report
+
+-- 141 of 157 --
+
+Loe, direct report
+
+-- 142 of 157 --
+
+Loe, direct report
+
+-- 143 of 157 --
+
+Research
+An easier editor
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 144 of 157 --
+
+A blog setup for marketers,
+not developers
+Research (from F to A-)
+Loe, direct report
+PRODUCT SOLUTIONS
+
+-- 145 of 157 --
+
+User
+Problems
+Solutions
+Impact
+HOW LOE WORKS
+
+-- 146 of 157 --
+
+1 day for a live site
+38% increase activation
+for the CMS Hub offering
+IMPACT
+
+-- 147 of 157 --
+
+8,000 new CMS Starter portals
+3 months after launch
+IMPACT
+
+-- 148 of 157 --
+
+10% of CMS Starter customers
+upgrading to CMS Professional
+year over year
+IMPACT
+
+-- 149 of 157 --
+
+An easier editor confirmed
+through research
+Select a theme 	B
+Change logo and navigation 	A
+Inline editing 	B+
+Adding background image 	B+
+Create a folder 	B
+Grading Research Doc and User Onboarding Research
+IMPACT
+Loe, research lead
+
+-- 150 of 157 --
+
+Five well deserved promotions -
+scaling impact and HubSpot’s
+design management pipeline.
+The most diverse design team
+at HubSpot. Internal talent
+trying to join the HubSpot CMS.
+IMPACT
+Design excellence
+Loe
+
+-- 151 of 157 --
+
+IMPACT
+
+-- 152 of 157 --
+
+Won the 2021 Great Manager
+Awarded to 25 HubSpot
+managers company-wide.
+Team nominated. 550
+nominees in 2021.
+Loe
+IMPACT
+
+-- 153 of 157 --
+
+More in
+their own
+words…
+
+-- 154 of 157 --
+
+Loe acted as a mirror for my work, helping me
+reflect on both my strengths and areas for
+growth. She provided timely feedback,
+especially positive reinforcement, so I always
+knew how I was progressing toward my goals.
+Loe also ensured I was assigned the right
+projects and mentorship opportunities, giving
+me valuable experiences to hone my skills and
+demonstrate my contributions to leadership.
+These opportunities, combined with her
+constructive feedback, were key to achieving
+my goals and building my confidence.
+Lisa Covino
+Design Manager, HubSpot
+
+-- 155 of 157 --
+
+Loe helped me grow at Webflow by:
+● Helping me identify strengths and
+professional goals to expand them.
+● Coaching me on a promotion to senior
+designer by helping me assess my
+performance and gaps against career ladder
+and advocating for me with leadership
+● Providing frequent feedback, both positive
+and constructive, to help me hone my work
+products
+● Identifying and coaching me on
+opportunities that helped me work toward
+my development goals	Jenna Clemens
+Senior Product Designer, Gusto
+
+-- 156 of 157 --
+
+Loe is always looking out for and advocating for
+her team - and does it in an incredibly smart and
+kind way - always finding the right time to say the
+right thing. She is great at reading people, and
+I’ve watched her tailor her messaging depending
+on the context. Whether it’s sharing feedback or
+new work, Loe is SO GOOD at crafting a
+compelling narrative and it’s inspired me to
+uplevel and spend more time in that skill area. I
+have learned so much from her thoughtful and
+strategic leadership.Jessica Prost
+Principal Designer, Zillow
+
+-- 157 of 157 --
+
