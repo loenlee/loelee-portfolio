@@ -106,16 +106,23 @@ const COACH_EMAIL = "loenlee@gmail.com";
 const CoachHero = () => (
   <header className="section hero" style={{ paddingTop: 'clamp(48px,9vw,120px)' }}>
     <div className="wrap">
-      <div className="kicker reveal"><span className="bar"></span>1:1 coaching</div>
-      <h1 className="display reveal" style={{ marginTop: 30, maxWidth: '14em' }}>
-        Lead from a place of <span className="accent">confidence,</span> not just competence.
-      </h1>
-      <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '36em' }}>
-        Have a tough boss? Looking to grow faster? Trying to manage being a parent and a tech leader? Exploring new opportunities? I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
-      </p>
-      <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
-        Book a free 30-min consultation ↗
-      </a>
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <div className="kicker reveal"><span className="bar"></span>1:1 coaching</div>
+          <h1 className="display reveal" style={{ marginTop: 30 }}>
+            Lead with <span className="accent">authenticity.</span>
+          </h1>
+          <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
+            Have a tough boss? Looking to grow faster? Trying to manage being a parent and a tech leader? Exploring new opportunities? I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
+          </p>
+          <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
+            Book a free 30-min consultation ↗
+          </a>
+        </div>
+        <figure className="hero-portrait reveal">
+          <img src="artifacts/loe-portrait-color.jpg" alt="Portrait of Loe Lee" loading="eager" />
+        </figure>
+      </div>
     </div>
   </header>
 );
@@ -141,13 +148,13 @@ const WhyCoaching = () => (
     <div className="wrap">
       <div className="kicker reveal" style={{ marginBottom: 'clamp(28px,4vw,48px)' }}><span className="bar"></span>Why coaching?</div>
       <div className="split">
-        <p className="pull reveal">Coaching helps you find and trust your own compass.</p>
+        <p className="pull reveal">Know yourself deeply and make a plan.</p>
         <div className="reveal">
           <div className="findings" style={{ borderTop: 'none' }}>
             {[
-              ['See your blind spots', "I'll ask the sharp, sometimes uncomfortable questions that surface the patterns and mindsets quietly holding you back."],
-              ['Turn ambiguity into a plan', "Together we'll define what success actually looks like, then build a concrete, actionable path toward it."],
-              ['Build your case for influence', "Whether it's a promotion, a raise, or a bigger seat at the table, we'll sharpen how you communicate your impact."],
+              ['Identify growth areas', "I'll ask the sharp, sometimes uncomfortable questions that surface the patterns and mindsets quietly holding you back."],
+              ['Make a plan', "Together we'll define what success actually looks like, then build a concrete, actionable path toward it."],
+              ['Define your outcomes', "Whether it's a promotion, a raise, or a bigger seat at the table, we'll sharpen how you communicate your impact."],
             ].map(([t, b], i) => (
               <div className="finding" key={i} style={{ gridTemplateColumns: '220px 1fr' }}>
                 <div className="ft">{t}</div>
@@ -323,22 +330,15 @@ const Packages = () => {
 const CoachAbout = () => (
   <section className="section" id="about">
     <div className="wrap">
-      <div className="split narrow-img">
-        <div className="reveal">
-          <div className="kicker" style={{ marginBottom: 24 }}><span className="bar"></span>About me</div>
-          <h2 className="h-xl" style={{ marginBottom: 22 }}>From the inside.</h2>
-          <p className="body" style={{ marginBottom: 16 }}>
-            I'm a Senior Manager of Product Design, currently at Vanta, with prior leadership roles at Zillow, HubSpot, and Webflow. I've spent my career building and growing design teams — hiring, promoting, and advocating for the people on them.
-          </p>
-          <p className="body">
-            That's the same work I do as a coach: helping you understand yourself, the systems you operate within, and how to navigate them while staying true to what you believe in. My clients are women and marginalized groups in tech — designers, managers, and leaders at every stage.
-          </p>
-        </div>
-        <figure className="figure reveal">
-          <div className="plate">
-            <img src="artifacts/loe-portrait-bw-clean.jpg" alt="Portrait of Loe Lee" loading="lazy" />
-          </div>
-        </figure>
+      <div className="reveal" style={{ maxWidth: '42em' }}>
+        <div className="kicker" style={{ marginBottom: 24 }}><span className="bar"></span>About me</div>
+        <h2 className="h-xl" style={{ marginBottom: 22 }}>From the inside.</h2>
+        <p className="body" style={{ marginBottom: 16 }}>
+          I'm a Senior Manager of Product Design, currently at Vanta, with prior leadership roles at Zillow, HubSpot, and Webflow. I've spent my career building and growing design teams — hiring, promoting, and advocating for the people on them.
+        </p>
+        <p className="body">
+          That's the same work I do as a coach: helping you understand yourself, the systems you operate within, and how to navigate them while staying true to what you believe in. My clients are women and marginalized groups in tech — designers, managers, and leaders at every stage.
+        </p>
       </div>
     </div>
   </section>

@@ -4,25 +4,24 @@
    ============================================================ */
 
 :root {
-  /* Cool porcelain shell — clean, calm, and lets the warm accent carry color */
-  --paper:    #E8EAEC;
-  --surface:  #F1F2F4;
-  --surface-2:#F9FAFB;
-  --ink:      #18191B;
-  --ink-2:    #585B60;
-  --ink-3:    #5F636A;
-  --line:     rgba(20,22,26,0.12);
-  --line-2:   rgba(20,22,26,0.22);
+  /* Warm ivory shell — clean, inviting, and lets the accent carry warmth */
+  --paper:    #FCFAF6;
+  --surface:  #F6F1EA;
+  --surface-2:#FBF8F3;
+  --ink:      #1C1815;
+  --ink-2:    #6B6157;
+  --ink-3:    #756A5D;
+  --line:     rgba(50,38,26,0.12);
+  --line-2:   rgba(50,38,26,0.22);
 
-  /* Funky magenta-raspberry accent (tweakable). Chroma kept just inside
-     the sRGB edge so it renders consistently on wide-gamut (P3) Macs. */
-  --accent:   #CB2A6B;
-  /* Deeper accent for SMALL text on light bg — meets WCAG AA (~5.4:1) */
-  --accent-text: #AD1E58;
+  /* Warm terracotta accent — confident, earthy, trustworthy */
+  --accent:   #C1502E;
+  /* Deeper accent for SMALL text on light bg — meets WCAG AA (~5.6:1) */
+  --accent-text: #9C3D1F;
   --accent-ink: #1A1813;
 
   --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-display: "Newsreader", "Hanken Grotesk", Georgia, serif;
+  --font-display: "Lora", "Newsreader", Georgia, serif;
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
 
   /* density (tweakable via [data-density]) */
