@@ -337,6 +337,18 @@ const Packages = () => {
   );
 };
 
+const BookCTA = () => (
+  <section className="cta-dark">
+    <div className="cta-inner reveal">
+      <h2 className="cta-title">Book a free 30-minute consultation.</h2>
+      <p className="cta-sub">Schedule a complimentary session to talk through what you're navigating and see if coaching is the right fit.</p>
+      <a className="cta-btn" href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
+        Book a time ↗
+      </a>
+    </div>
+  </section>
+);
+
 const CoachAbout = () => (
   <section className="section" id="about">
     <div className="wrap">
@@ -389,6 +401,7 @@ const CoachingPage = () => (
     <div className="wrap"><hr className="rule" /></div>
     <WhatToExpect />
     <Packages />
+    <BookCTA />
     <div className="wrap"><hr className="rule" /></div>
     <CoachAbout />
     <div className="wrap"><hr className="rule" /></div>
