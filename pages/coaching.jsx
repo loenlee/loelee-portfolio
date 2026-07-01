@@ -113,7 +113,7 @@ const CoachHero = () => (
             Lead with <span className="accent">authenticity.</span>
           </h1>
           <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
-            Have a tough boss? Looking to grow faster? Trying to manage being a parent and a tech leader? Exploring new opportunities? I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
+            Tough boss? Looking to grow while parenting and leading in tech? Exploring new opportunities? I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
           </p>
           <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
             Book a free 30-min consultation ↗
@@ -153,8 +153,8 @@ const WhyCoaching = () => (
           <div className="findings" style={{ borderTop: 'none' }}>
             {[
               ['Identify growth areas', "I'll ask the sharp, sometimes uncomfortable questions that surface the patterns and mindsets quietly holding you back."],
-              ['Make a plan', "Together we'll define what success actually looks like, then build a concrete, actionable path toward it."],
               ['Define your outcomes', "Whether it's a promotion, a raise, or a bigger seat at the table, we'll sharpen how you communicate your impact."],
+              ['Make a plan', "Together we'll define what success actually looks like, then build a concrete, actionable path toward it."],
             ].map(([t, b], i) => (
               <div className="finding" key={i} style={{ gridTemplateColumns: '220px 1fr' }}>
                 <div className="ft">{t}</div>
