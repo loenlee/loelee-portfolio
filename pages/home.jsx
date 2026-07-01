@@ -230,7 +230,7 @@ const Coaching = () => (
         </div>
         <div className="reveal">
           <p className="lede" style={{ maxWidth: '34em', marginBottom: 28 }}>
-            Have a tough boss? Looking to grow faster? I coach women and marginalized groups in tech to better understand themselves, the systems they operate within, and how to navigate them while staying true to themselves.
+            Tough boss? Looking to grow faster? I coach women and marginalized groups in tech to better understand themselves, the systems they operate within, and how to navigate them while staying true to themselves.
           </p>
           <a className="coach-book-btn" href="coaching.html">
             View coaching packages →
