@@ -112,9 +112,19 @@ const CoachHero = () => (
           <h1 className="display reveal" style={{ marginTop: 30 }}>
             Lead with <span className="accent">authenticity.</span>
           </h1>
-          <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
-            Tough boss? Looking to grow while parenting and leading in tech? Exploring new opportunities? I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
-          </p>
+          <div className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
+            <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+              {['Tough boss?', 'Looking to grow?', 'Parenting and leading in tech?', 'Exploring new opportunities?'].map((q) => (
+                <li key={q} style={{ paddingLeft: '1.3em', position: 'relative', marginBottom: 6 }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>—</span>
+                  {q}
+                </li>
+              ))}
+            </ul>
+            <p style={{ margin: 0, marginTop: 16 }}>
+              I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
+            </p>
+          </div>
           <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
             Book a free 30-min consultation ↗
           </a>

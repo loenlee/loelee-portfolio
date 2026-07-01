@@ -44,7 +44,7 @@ const Hero = () => (
             I grow diverse<br />winning <span className="accent">teams.</span>
           </h1>
           <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '24em' }}>
-            I build autonomous teams and ship AI powered experiences customers and businesses love.
+            I build autonomous teams and ship AI powered experiences customers and businesses love. I also coach on the side.
           </p>
         </div>
         <figure className="hero-portrait reveal">
