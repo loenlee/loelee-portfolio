@@ -116,13 +116,13 @@ const CoachHero = () => (
             <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
               {['Tough boss?', 'Looking to grow?', 'Parenting and leading in tech?', 'Exploring new opportunities?'].map((q) => (
                 <li key={q} style={{ paddingLeft: '1.3em', position: 'relative', marginBottom: 6 }}>
-                  <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>—</span>
+                  <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>•</span>
                   {q}
                 </li>
               ))}
             </ul>
             <p style={{ margin: 0, marginTop: 16 }}>
-              I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to themselves and what they believe in.
+              I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to what they believe in.
             </p>
           </div>
           <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
