@@ -110,7 +110,7 @@ const CoachHero = () => (
         <div className="hero-copy">
           <div className="kicker reveal"><span className="bar"></span>1:1 coaching</div>
           <h1 className="display reveal" style={{ marginTop: 30 }}>
-            Coaching <span className="accent">authentic leaders.</span>
+            Coaching authentic <span className="accent">leaders.</span>
           </h1>
           <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
             I coach folks in tech to better understand themselves, the corporate systems they're in, and how to navigate those systems while staying true to themselves. I specialize in supporting women, neurodivergent folks, and folks with ethnically diverse backgrounds.
