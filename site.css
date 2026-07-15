@@ -32,7 +32,7 @@
   --accent-4-text: #96721A;
 
   --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-display: "Arapey", "Newsreader", Georgia, serif;
+  --font-display: "Fraunces", "Newsreader", Georgia, serif;
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
 
   /* density (tweakable via [data-density]) */
@@ -99,7 +99,7 @@ img { display: block; max-width: 100%; }
 
 .display {
   font-family: var(--font-display);
-  font-weight: 560;
+  font-weight: 680;
   font-size: clamp(44px, 7.4vw, 100px);
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -107,7 +107,7 @@ img { display: block; max-width: 100%; }
 }
 .h-xl {
   font-family: var(--font-display);
-  font-weight: 540;
+  font-weight: 650;
   font-size: clamp(38px, 6.0vw, 88px);
   line-height: 1.04;
   letter-spacing: -0.018em;
@@ -116,7 +116,7 @@ img { display: block; max-width: 100%; }
 }
 .h-lg {
   font-family: var(--font-display);
-  font-weight: 560;
+  font-weight: 650;
   font-size: clamp(31px, 4.1vw, 56px);
   line-height: 1.08;
   letter-spacing: -0.015em;
