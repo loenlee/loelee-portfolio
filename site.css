@@ -32,7 +32,7 @@
   --accent-4-text: #96721A;
 
   --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-display: "Lora", "Newsreader", Georgia, serif;
+  --font-display: "Arapey", "Newsreader", Georgia, serif;
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
 
   /* density (tweakable via [data-density]) */

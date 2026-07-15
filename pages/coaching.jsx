@@ -113,7 +113,7 @@ const CoachHero = () => (
             Coaching <span className="accent">authentic leaders.</span>
           </h1>
           <p className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
-            Tough boss? Looking to grow? Parenting and leading in tech? Exploring new opportunities? I coach folks in tech to better understand themselves, the corporate systems they're in, and how to navigate those systems while staying true to themselves. I specialize in supporting women, neurodivergent folks, and folks with ethnically diverse backgrounds.
+            I coach folks in tech to better understand themselves, the corporate systems they're in, and how to navigate those systems while staying true to themselves. I specialize in supporting women, neurodivergent folks, and folks with ethnically diverse backgrounds.
           </p>
           <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
             Book a free 30-min consultation ↗
