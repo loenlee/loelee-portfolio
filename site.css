@@ -100,7 +100,7 @@ img { display: block; max-width: 100%; }
 .display {
   font-family: var(--font-display);
   font-weight: 560;
-  font-variation-settings: 'opsz' 30;
+  font-variation-settings: 'opsz' 30, 'WONK' 0, 'SOFT' 40;
   font-size: clamp(44px, 7.4vw, 100px);
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -109,7 +109,7 @@ img { display: block; max-width: 100%; }
 .h-xl {
   font-family: var(--font-display);
   font-weight: 540;
-  font-variation-settings: 'opsz' 30;
+  font-variation-settings: 'opsz' 30, 'WONK' 0, 'SOFT' 40;
   font-size: clamp(38px, 6.0vw, 88px);
   line-height: 1.04;
   letter-spacing: -0.018em;
@@ -119,7 +119,7 @@ img { display: block; max-width: 100%; }
 .h-lg {
   font-family: var(--font-display);
   font-weight: 540;
-  font-variation-settings: 'opsz' 30;
+  font-variation-settings: 'opsz' 30, 'WONK' 0, 'SOFT' 40;
   font-size: clamp(31px, 4.1vw, 56px);
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -794,7 +794,7 @@ img { display: block; max-width: 100%; }
 /* next case footer link */
 .nextcase { display:flex; align-items:center; justify-content:space-between; gap: 24px; padding: clamp(40px,6vw,80px) 0; }
 .nextcase .lbl { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
-.nextcase .nm { font-family: var(--font-display); font-weight: 560; font-size: clamp(34px, 5.2vw, 74px); letter-spacing: -0.018em; line-height: 1.02; }
+.nextcase .nm { font-family: var(--font-display); font-weight: 560; font-variation-settings: 'opsz' 30, 'WONK' 0, 'SOFT' 40; font-size: clamp(34px, 5.2vw, 74px); letter-spacing: -0.018em; line-height: 1.02; }
 .nextcase .nm:hover { color: var(--accent); }
 
 /* ===== Footer ===== */
@@ -837,7 +837,7 @@ img { display: block; max-width: 100%; }
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   background: var(--accent); color: #fff; border-radius: 999px; padding: 5px 11px;
 }
-.coach-price { font-family: var(--font-display); font-weight: 560; font-size: clamp(30px, 3vw, 42px); letter-spacing: -0.015em; line-height: 1; color: var(--ink); }
+.coach-price { font-family: var(--font-display); font-weight: 560; font-variation-settings: 'opsz' 30, 'WONK' 0, 'SOFT' 40; font-size: clamp(30px, 3vw, 42px); letter-spacing: -0.015em; line-height: 1; color: var(--ink); }
 .coach-name { margin: 14px 0 0; font-size: clamp(17px, 1.5vw, 20px); font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
 .coach-tag { margin: 12px 0 0; font-style: italic; font-size: 15px; color: var(--accent-text); }
 .coach-desc { margin: 10px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
