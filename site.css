@@ -14,11 +14,22 @@
   --line:     rgba(50,38,26,0.12);
   --line-2:   rgba(50,38,26,0.22);
 
-  /* Warm terracotta accent — confident, earthy, trustworthy */
-  --accent:   #C1502E;
-  /* Deeper accent for SMALL text on light bg — meets WCAG AA (~5.6:1) */
-  --accent-text: #9C3D1F;
+  /* Vivid coral accent — pulled from the outfit's red diamond pattern */
+  --accent:   #E14F3D;
+  /* Deeper accent for SMALL text on light bg — meets WCAG AA */
+  --accent-text: #B23A2A;
   --accent-ink: #1A1813;
+
+  /* Secondary vibrant palette — pulled from the rest of the outfit:
+     leaf-print teal, chevron sky blue, mustard-gold accents. Used
+     sparingly (testimonial tags, growth-area numbers, project chips)
+     so the site reads as vibrant, not chaotic. */
+  --accent-2:      #1F7A5C;
+  --accent-2-text: #145C44;
+  --accent-3:      #2E7FB8;
+  --accent-3-text: #1F5F8C;
+  --accent-4:      #C89A2E;
+  --accent-4-text: #96721A;
 
   --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-display: "Lora", "Newsreader", Georgia, serif;
@@ -183,6 +194,7 @@ img { display: block; max-width: 100%; }
 
 /* Mobile menu disclosure — only shown when the flat links would wrap */
 .nav-group { display: none; position: relative; }
+.nav-portfolio { display: inline-block; }
 .nav-group > summary {
   list-style: none; cursor: pointer; user-select: none;
   display: inline-flex; align-items: center; gap: 8px;
@@ -224,6 +236,7 @@ img { display: block; max-width: 100%; }
   .nav-links { flex-wrap: nowrap; justify-content: flex-end; gap: 0; }
   .nav-flat { display: none; }
   .nav-group { display: inline-block; }
+  .nav-portfolio { display: none; }
   .nav-group > summary { padding: 8px 12px; font-size: 12.5px; }
 }
 

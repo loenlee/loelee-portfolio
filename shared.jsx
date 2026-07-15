@@ -14,6 +14,7 @@ const PROJECTS = [
     title: "Evolving and evaluating Vanta's AI Agent at warp speed.",
     mode: ['Hands-on'],
     comingSoon: true,
+    accentVar: '--accent-2',
     hero: { src: ART + 'vanta-agent.png', kind: 'plate' },
     blurb: "Honing an approach, staffing a team, and championing a fast paced design, build, and evaluation of agents to empower GRC professionals to build trust.",
   },
@@ -23,6 +24,7 @@ const PROJECTS = [
     role: 'Sr. Manager of Design',
     title: "Helping small business marketers grow on their own.",
     mode: ['Leading at Scale', 'Launched'],
+    accentVar: '--accent-4',
     hero: { src: ART + 'img-126.jpg', kind: 'browser', url: 'app.hubspot.com/cms/onboarding' },
     blurb: "How I led a team to solve for customer, product, and organizational problems to help SMB marketers onboard to CMS Hub in one day, not three months.",
   },
@@ -32,6 +34,7 @@ const PROJECTS = [
     role: 'Director of Design',
     title: "Re-architecting sign-in for a housing super-app.",
     mode: ['Hands-on', 'In flight'],
+    accentVar: '--accent-3',
     hero: { src: ART + 'zillow-signin.png', kind: 'phone' },
     blurb: "Zillow's sign-in experience needed a major upgrade to become a Housing Super App. At the time, it quietly hurt customers.",
   },
@@ -108,12 +111,19 @@ const Nav = ({ current }) => (
       <b>LOE LEE</b>
     </a>
     <div className="nav-links">
-      <a href="vanta.html" className={`nav-flat ${current === 'vanta' ? 'active' : ''}`}>Vanta</a>
-      <a href="hubspot.html" className={`nav-flat ${current === 'hubspot' ? 'active' : ''}`}>HubSpot</a>
-      <a href="zillow.html" className={`nav-flat ${current === 'zillow' ? 'active' : ''}`}>Zillow</a>
+      <details className="nav-group nav-portfolio">
+        <summary aria-label="Portfolio" className={['vanta', 'hubspot', 'zillow'].includes(current) ? 'active' : ''}>
+          Portfolio
+        </summary>
+        <div className="nav-group-menu">
+          <a href="vanta.html" className={current === 'vanta' ? 'active' : ''}>Vanta</a>
+          <a href="hubspot.html" className={current === 'hubspot' ? 'active' : ''}>HubSpot</a>
+          <a href="zillow.html" className={current === 'zillow' ? 'active' : ''}>Zillow</a>
+        </div>
+      </details>
       <a href="index.html#vanta" className="nav-flat">Leadership style</a>
       <a href="coaching.html" className="nav-flat">Coaching</a>
-      <details className="nav-group">
+      <details className="nav-group nav-burger-menu">
         <summary aria-label="Menu" className={['vanta', 'hubspot', 'zillow'].includes(current) ? 'active' : ''}>
           <span className="nav-burger" aria-hidden="true"><span></span><span></span><span></span></span>
           <span className="nav-burger-label">Menu</span>

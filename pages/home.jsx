@@ -102,7 +102,19 @@ const Work = () => (
               <p className="body">{p.blurb}</p>
               <div className="case-mode">
                 {p.comingSoon && <span className="chip chip-soon">Coming soon</span>}
-                {p.mode.map((m) => <span className="chip" key={m}>{m}</span>)}
+                {p.mode.map((m) => (
+                  <span
+                    className="chip"
+                    key={m}
+                    style={{
+                      background: `color-mix(in srgb, var(${p.accentVar}) 14%, var(--surface))`,
+                      color: `var(${p.accentVar})`,
+                      borderColor: `color-mix(in srgb, var(${p.accentVar}) 32%, transparent)`,
+                    }}
+                  >
+                    {m}
+                  </span>
+                ))}
               </div>
               {p.stat && (
                 <div className="case-stat">

@@ -110,7 +110,7 @@ const CoachHero = () => (
         <div className="hero-copy">
           <div className="kicker reveal"><span className="bar"></span>1:1 coaching</div>
           <h1 className="display reveal" style={{ marginTop: 30 }}>
-            Lead with <span className="accent">authenticity.</span>
+            Coaching for <span className="accent">authentic leaders.</span>
           </h1>
           <div className="lede reveal" style={{ marginTop: 'clamp(14px,2vw,24px)', maxWidth: '34em' }}>
             <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
@@ -122,7 +122,7 @@ const CoachHero = () => (
               ))}
             </ul>
             <p style={{ margin: 0, marginTop: 16 }}>
-              I coach women and marginalized groups in tech to better understand themselves, the corporate systems they operate within, and how to navigate those systems while staying true to what they believe in.
+              I coach folks in tech to better understand themselves, the corporate systems they're in, and how to navigate those systems while staying true to themselves. I specialize in supporting women, neurodivergent folks, and folks with ethnically diverse backgrounds.
             </p>
           </div>
           <a className="coach-book-btn reveal" style={{ marginTop: 28 }} href="https://calendly.com/loenlee/30-minute-intro-w-loe" target="_blank" rel="noreferrer">
@@ -142,37 +142,15 @@ const GrowthAreas = () => (
     <div className="wrap">
       <div className="kicker reveal" style={{ marginBottom: 'clamp(28px,4vw,48px)' }}><span className="bar"></span>Are you seeking growth in…</div>
       <div className="beliefs reveal">
-        {GROWTH_AREAS.map((g, i) => (
-          <div className="belief" key={i}>
-            <div className="n">{String(i + 1).padStart(2, '0')}</div>
-            <div className="t" style={{ fontSize: 'clamp(18px,2vw,24px)' }}>{g}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const WhyCoaching = () => (
-  <section className="section">
-    <div className="wrap">
-      <div className="kicker reveal" style={{ marginBottom: 'clamp(28px,4vw,48px)' }}><span className="bar"></span>Why coaching?</div>
-      <div className="split">
-        <p className="pull reveal">Know yourself deeply and make a plan.</p>
-        <div className="reveal">
-          <div className="findings" style={{ borderTop: 'none' }}>
-            {[
-              ['Identify growth areas', "I'll ask the sharp, sometimes uncomfortable questions that surface the patterns and mindsets quietly holding you back."],
-              ['Define your outcomes', "Whether it's a promotion, a raise, or a bigger seat at the table, we'll sharpen how you communicate your impact."],
-              ['Make a plan', "Together we'll define what success actually looks like, then build a concrete, actionable path toward it."],
-            ].map(([t, b], i) => (
-              <div className="finding" key={i} style={{ gridTemplateColumns: '220px 1fr' }}>
-                <div className="ft">{t}</div>
-                <div className="fb">{b}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {GROWTH_AREAS.map((g, i) => {
+          const palette = ['var(--accent)', 'var(--accent-2)', 'var(--accent-3)', 'var(--accent-4)'];
+          return (
+            <div className="belief" key={i}>
+              <div className="n" style={{ color: palette[i % palette.length] }}>{String(i + 1).padStart(2, '0')}</div>
+              <div className="t" style={{ fontSize: 'clamp(18px,2vw,24px)' }}>{g}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -188,16 +166,22 @@ const CoachTestimonials = () => (
         </div>
       </div>
       <div className="gal gal-2">
-        {COACH_TESTIMONIALS.map((t, i) => (
-          <div className="quote reveal" key={i}>
-            <div className="label" style={{ color: 'var(--accent-text)', marginBottom: 12 }}>{t.theme}</div>
-            <p className="body-q">“{t.quote}”</p>
-            <div className="who">
-              <span className="dot"></span>
-              <span><span className="name">{t.who}</span><br /><span className="title">{t.title}</span></span>
+        {COACH_TESTIMONIALS.map((t, i) => {
+          const palette = ['var(--accent-text)', 'var(--accent-2-text)', 'var(--accent-3-text)', 'var(--accent-4-text)'];
+          const dotPalette = ['var(--accent)', 'var(--accent-2)', 'var(--accent-3)', 'var(--accent-4)'];
+          const color = palette[i % palette.length];
+          const dotColor = dotPalette[i % dotPalette.length];
+          return (
+            <div className="quote reveal" key={i}>
+              <div className="label" style={{ color, marginBottom: 12 }}>{t.theme}</div>
+              <p className="body-q">“{t.quote}”</p>
+              <div className="who">
+                <span className="dot" style={{ background: dotColor }}></span>
+                <span><span className="name">{t.who}</span><br /><span className="title">{t.title}</span></span>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>
@@ -394,8 +378,6 @@ const CoachingPage = () => (
     <CoachHero />
     <div className="wrap"><hr className="rule" /></div>
     <GrowthAreas />
-    <div className="wrap"><hr className="rule" /></div>
-    <WhyCoaching />
     <div className="wrap"><hr className="rule" /></div>
     <CoachTestimonials />
     <div className="wrap"><hr className="rule" /></div>
